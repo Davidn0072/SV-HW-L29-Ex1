@@ -18,10 +18,10 @@ import { Separator } from "@/components/ui/separator"
 
 const navItems = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
-  { href: "/projects", label: "Projects", icon: FolderKanban },
-  { href: "/tasks", label: "Tasks", icon: CheckSquare },
-  { href: "/create-task", label: "Create Task", icon: PlusCircle },
-  { href: "/settings", label: "Settings", icon: Settings },
+  { href: "/dashboard/projects", label: "Projects", icon: FolderKanban },
+  { href: "/dashboard/tasks", label: "Tasks", icon: CheckSquare },
+  { href: "/dashboard/tasks/create", label: "Create Task", icon: PlusCircle },
+  { href: "/dashboard/settings", label: "Settings", icon: Settings },
 ]
 
 interface DashboardLayoutProps {
@@ -63,7 +63,7 @@ export function DashboardLayout({ children, pageTitle }: DashboardLayoutProps) {
                   className={cn(
                     "w-full justify-start gap-3 text-sidebar-foreground hover:bg-sidebar-accent hover:text-sidebar-accent-foreground",
                     isActive &&
-                      "bg-sidebar-accent text-sidebar-accent-foreground"
+                    "bg-sidebar-accent text-sidebar-accent-foreground"
                   )}
                 >
                   <Link href={item.href}>
